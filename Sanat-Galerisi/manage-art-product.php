@@ -19,7 +19,7 @@ if (strlen($_SESSION['agmsaid']) == 0) {
     
     <head>
     
-        <title>Sanat Ürünlerini Yönet | Sanat Galerisi Yönetim Sistemi</title>
+        <title>Sanat Eserlerini Yönet | Sanat Galerisi Yönetim Sistemi</title>
     
         <!-- Bootstrap CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -50,11 +50,11 @@ if (strlen($_SESSION['agmsaid']) == 0) {
                 <section class="wrapper">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="page-header"><i class="fa fa-table"></i> Sanat Ürünlerini Yönet</h3>
+                            <h3 class="page-header"><i class="fa fa-table"></i> Sanat Eserlerini Yönet</h3>
                             <ol class="breadcrumb">
                                 <li><i class="fa fa-home"></i><a href="dashboard.php">Ana Sayfa</a></li>
-                                <li><i class="fa fa-table"></i>Sanat Ürünlerini Yönet</li>
-                                <li><i class="fa fa-th-list"></i>Sanat Ürünlerini Yönet</li>
+                                <li><i class="fa fa-table"></i>Sanat Eserlerini Yönet</li>
+                                <li><i class="fa fa-th-list"></i>Sanat Eserlerini Yönet</li>
                             </ol>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ if (strlen($_SESSION['agmsaid']) == 0) {
                         <div class="col-sm-12">
                             <section class="panel">
                                 <header class="panel-heading">
-                                    Sanat Ürünlerini Yönet
+                                    Sanat Eserlerini Yönet
                                 </header>
                                 <table class="table">
                                     <thead>

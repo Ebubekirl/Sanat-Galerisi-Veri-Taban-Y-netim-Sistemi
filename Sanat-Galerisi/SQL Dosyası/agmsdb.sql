@@ -1,3 +1,6 @@
+CREATE DATABASE agmsdb;
+use agmsdb;
+
 CREATE TABLE `tbladmin` (
   `ID` int(10) NOT NULL,
   `AdminName` varchar(45) DEFAULT NULL,
@@ -29,6 +32,9 @@ CREATE TABLE `tblartmedium` (
   `CreationDate` timestamp NULL DEFAULT current_timestamp(),
 PRIMARY KEY (`ID`)
 );
+
+INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
+(1, 'Admin', 'admin', 5070910089, 'ebubekirerkayal@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '2024-01-05 12:11:14');
 
 
 CREATE TABLE `tblcustomer` (

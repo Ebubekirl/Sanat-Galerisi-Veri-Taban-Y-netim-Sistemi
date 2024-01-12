@@ -34,7 +34,7 @@ if (strlen($_SESSION['agmsaid']==0)) {
   
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>View Enquiry | Art Gallery Management System</title>
+  <title>Müşteri Soruları | Sanat Galerisi Yönetim Sistemi</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -65,11 +65,11 @@ if (strlen($_SESSION['agmsaid']==0)) {
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-table"></i>View Enquiry</h3>
+            <h3 class="page-header"><i class="fa fa-table"></i>Sorular</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="dashboard.php">Home</a></li>
-              <li><i class="fa fa-table"></i>Enquiry</li>
-              <li><i class="fa fa-th-list"></i>View Enquiry</li>
+              <li><i class="fa fa-home"></i><a href="dashboard.php">Anasayfa</a></li>
+              <li><i class="fa fa-table"></i>Sorular</li>
+              <li><i class="fa fa-th-list"></i>Soruları Görüntüle</li>
             </ol>
           </div>
         </div>
@@ -78,7 +78,7 @@ if (strlen($_SESSION['agmsaid']==0)) {
           <div class="col-sm-12">
             <section class="panel">
               <header class="panel-heading">
-                View Enquiry Details
+                Soru Detayları
               </header>
               
   <?php
@@ -90,37 +90,36 @@ while ($row=mysqli_fetch_array($ret)) {
 ?>
                <table border="1" class="table table-bordered mg-b-0">
       <tr>
-                                <th>Enquiry Number</th>
+                                <th>Soru Numarası</th>
                                    <td colspan="3"><?php  echo $row['EnquiryNumber'];?></td>
                                    </tr> 
    <tr>
-                                <th>Full Name</th>
+                                <th>İsim</th>
                                    <td><?php  echo $row['FullName'];?></td>
                              
-                                <th>Art Name</th>
+                                <th>Sanat Eseri İsmi</th>
                                    <td><?php  echo $row['Title'];?><br />
-                                     <a href="edit-art-product-detail.php?editid=<?php echo $row['Artpdid'];?>"  target="_blank">View Details</a>
+                                     <a href="edit-art-product-detail.php?editid=<?php echo $row['Artpdid'];?>"  target="_blank">Ayrıntılar</a>
                                    </td>
                                    </tr>  
                                    <tr>
-                                <th>Art Reference Number</th>
+                                <th>Sanat Eseri Referans Numarası</th>
                                    <td><?php  echo $row['RefNum'];?></td>
 
                                 <th>Email</th>
                                    <td><?php  echo $row['Email'];?></td>
                                  </tr>
                           <tr>  
-                                <th>MobileNumber</th>
+                                <th>Telefon Numarası</th>
                                    <td><?php  echo $row['MobileNumber'];?></td>
                                     
-                                       <th>Enquiry Date</th>
+                                       <th>Soru Tarihi</th>
                                         <td><?php  echo $row['EnquiryDate'];?></td>
                                    </tr>
                                    <tr>
-                                    <th>Message</th>
+                                    <th>Mesaj</th>
                                       <td><?php  echo $row['Message'];?></td>
       
-    <th>Status</th>
     <td> <?php  
 if($row['Status']=="")
 {
@@ -151,19 +150,19 @@ if($row['Status']=="Answer")
  
 
   <tr align="center">
-    <td colspan="2"><button type="submit" name="submit" class="btn btn-primary btn-sm"><i class="fa fa-dot-circle-o"></i> Update</button></td>
+    <td colspan="2"><button type="submit" name="submit" class="btn btn-primary btn-sm"><i class="fa fa-dot-circle-o"></i> Güncelle</button></td>
   </tr>
   </form>
 <?php } else { ?>
 
   <tr>
-    <th>Remark</th>
+    <th>Admin Cevap</th>
     <td colspan="3"><?php echo $row['AdminRemark']; ?></td>
   </tr>
 
 
 <tr>
-<th>Remark date</th>
+<th>Admin Cevap Tarih</th>
 <td colspan="3"> <?php echo $row['AdminRemarkdate']; ?>  </td></tr>
 <?php } ?>
 
