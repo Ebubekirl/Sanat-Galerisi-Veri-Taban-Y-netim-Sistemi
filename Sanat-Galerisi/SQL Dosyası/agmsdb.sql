@@ -12,6 +12,9 @@ CREATE TABLE `tbladmin` (
 PRIMARY KEY (`ID`)	
 );
 
+INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
+(1, 'Admin', 'admin', 5075075070, 'ebubekirerkayal@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '2024-01-05 06:21:53');
+
 
 CREATE TABLE `tblartist` (
   `ID` int(10) NOT NULL,
